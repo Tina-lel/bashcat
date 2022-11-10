@@ -4,7 +4,7 @@ source $DIRMAIN/config
 
 while :
 do
-	watch -n 1 "socat tcp:localhost:$PORT - | tail -n $(($LINES - 2))"
+	watch -n 1 "socat tcp:$HOST:$PORT - | tail -n $(($LINES - 2))"
 	clear
 	echo "newmsg:"
 	read -r -e MAIN
