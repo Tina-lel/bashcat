@@ -1,0 +1,5 @@
+#!/bin/bash
+export HOST="localhost"
+export PORT="6868"
+export NCPORT="6869"
+export NAME="user"
