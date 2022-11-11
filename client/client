@@ -1,0 +1,27 @@
+#!/bin/bash
+export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
+source $DIRMAIN/config
+
+while :
+do
+	watch -n 1 "socat tcp:$HOST:$PORT -| tail -n $(($LINES - 2))"
+	reset
+	clear
+	echo "newmsg:"
+	read -r -e MAIN
+	if [[ $MAIN == "!exit" ]];
+	then
+		exit
+	elif [[ $MAIN == "!refresh" ]];
+	then
+		clear
+	else
+		date "+%T" >> tmp
+		echo -n "$NAME: " >> tmp
+		echo "$MAIN" >> tmp
+		echo "--------" >> tmp
+
+		cat tmp | nc -q 0 $HOST $NCPORT < tmp
+		rm -f tmp
+	fi
+done
