@@ -41,7 +41,11 @@ open up the "config" file in a text editor and enter a hostname/ip address of a 
 
 press ctrl+c to open the message box (the "newmsg:" text is a bit delayed, this is normal, you can type before it appears.)
 
+you might need to type "!refresh" in order to see all messages
+
 message box commands:
 -
+
+!refresh
 
 !exit
