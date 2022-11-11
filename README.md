@@ -39,7 +39,7 @@ open up the "config" file in a text editor and enter a hostname/ip address of a 
 
 ./client
 
-(press ctrl+c to open the message box)
+press ctrl+c to open the message box (the "newmsg:" text is a bit delayed, this is normal, you can type before it appears.)
 
 message box commands:
 -
