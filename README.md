@@ -8,7 +8,7 @@ this is just for testing purposes, please do not use this in a serious setting, 
 Dependencies:
 -
 
-netcat socat
+openbsd-netcat socat
 
 Ussage:
 -
